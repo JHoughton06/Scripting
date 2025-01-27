@@ -10,7 +10,7 @@ public class TansformController : MonoBehaviour
         transform.position = p;
 
         // rotate the game object
-        transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime);
+        transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime * 10);
     }
 
 }
