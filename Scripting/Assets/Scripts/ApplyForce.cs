@@ -9,7 +9,7 @@ public class ApplyForce : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.right * 500);
+        rb.AddForce(Vector3.up * 50);
     }
 
     // Update is called once per frame
