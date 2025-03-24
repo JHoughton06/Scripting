@@ -1,53 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
+
 using UnityEngine;
 
-public class CharacterAnimationController : MonoBehaviour
+public class CharacterAnimationControllerTwo : MonoBehaviour
 {
+    public CharacterController controller;
     private Animator animator;
+    private readonly int
+        run = Animator.StringToHash("Run"),
+        idle = Animator.StringToHash("Idle"),
+        jump = Animator.StringToHash("Jump"),
+        wallJump = Animator.StringToHash("WallJump");
 
-    void Start()
+    private void Start()
     {
+        // Cache the Animator component attached to CharacterArt
         animator = GetComponent<Animator>();
+        //controller in parent object
+        controller = GetComponentInParent<CharacterController>();
     }
 
-    void Update()
+    private void Update()
     {
         HandleAnimations();
     }
 
     private void HandleAnimations()
     {
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        float horizontalMove = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && controller.isGrounded)
         {
-            animator.SetTrigger("Jump");
-            StartCoroutine(ResetTriggerAfterTime("Jump", stateInfo.length)); // Reset after animation time
+            animator.SetBool(jump, true);
+
+        }
+        else if (controller.isGrounded && animator.GetBool("Jump"))
+        {
+            animator.SetBool(jump, false);
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Mathf.Abs(horizontalMove) > 0)
         {
-            animator.SetTrigger("Hit");
-            StartCoroutine(ResetTriggerAfterTime("Hit", stateInfo.length));
+            animator.SetBool(run, true);
+            animator.SetBool(idle, false);
         }
-
-        if (Input.GetKeyDown(KeyCode.F))
+        else
         {
-            animator.SetTrigger("Fall");
-            StartCoroutine(ResetTriggerAfterTime("Fall", stateInfo.length));
+            animator.SetBool(run, false);
+            animator.SetBool(idle, true);
         }
-    }
-
-    private System.Collections.IEnumerator ResetTriggerAfterTime(string triggerName, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        animator.ResetTrigger(triggerName);
-        animator.SetTrigger("Idle"); // Return to Idle
     }
 }
-
-
-
-
