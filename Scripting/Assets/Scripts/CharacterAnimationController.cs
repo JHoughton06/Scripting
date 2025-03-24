@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class CharacterAnimationControllerTwo : MonoBehaviour
+public class CharacterAnimationController : MonoBehaviour
 {
     public CharacterController controller;
     private Animator animator;
@@ -28,7 +28,7 @@ public class CharacterAnimationControllerTwo : MonoBehaviour
     {
         float horizontalMove = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && controller.isGrounded)
+        if (Input.GetButtonDown("Jump")) //&& controller.isGrounded)
         {
             animator.SetBool(jump, true);
 
