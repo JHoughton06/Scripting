@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 using UnityEngine;
 
 public class CharacterAnimationController : MonoBehaviour
@@ -28,10 +31,16 @@ public class CharacterAnimationController : MonoBehaviour
     {
         float horizontalMove = Input.GetAxisRaw("Horizontal");
 
+<<<<<<< Updated upstream
         if (Input.GetButtonDown("Jump")) //&& controller.isGrounded)
         {
             animator.SetBool(jump, true);
 
+=======
+        if (Input.GetButtonDown("Jump") && controller.isGrounded)
+        {
+            animator.SetBool(jump, true);
+>>>>>>> Stashed changes
         }
         else if (controller.isGrounded && animator.GetBool("Jump"))
         {
@@ -50,3 +59,9 @@ public class CharacterAnimationController : MonoBehaviour
         }
     }
 }
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
