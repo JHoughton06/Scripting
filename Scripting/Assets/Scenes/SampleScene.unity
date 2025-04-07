@@ -319,7 +319,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1613,7 +1613,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1430702864}
   - component: {fileID: 1430702865}
-  - component: {fileID: 1430702866}
   m_Layer: 0
   m_Name: ScoreContainer
   m_TagString: Untagged
@@ -1649,19 +1648,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: {fileID: 11400000, guid: 5cc0419bb640a4748b0c3a4bddadac3b, type: 2}
---- !u!114 &1430702866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430702862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e48cc945ee99dc45b0a34414e3f42fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 0
 --- !u!1 &1616549630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2290,7 @@ PrefabInstance:
     - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1430702866}
+      objectReference: {fileID: 11400000, guid: 5cc0419bb640a4748b0c3a4bddadac3b, type: 2}
     - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
       propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

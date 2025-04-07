@@ -18,8 +18,13 @@ public class SimpleTextMeshProBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void UpdateWithIntData()
+    void Update()
     {
-        textObj.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
+        UpdateWithIntData();
+    }
+
+    public void UpdateWithIntData()
+    {
+        textObj.text = "Score: " + dataObj.value.ToString(CultureInfo.InvariantCulture);
     }
 }
