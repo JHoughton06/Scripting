@@ -2279,38 +2279,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreItem
       objectReference: {fileID: 0}
-    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11400000, guid: 5cc0419bb640a4748b0c3a4bddadac3b, type: 2}
-    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateValue
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ScoreManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
-      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7968881599975580427, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.13
