@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 36945032}
   - component: {fileID: 36945031}
   - component: {fileID: 36945033}
+  - component: {fileID: 36945034}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -263,7 +264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 740, y: -48}
+  m_AnchoredPosition: {x: 740, y: -50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &36945031
@@ -376,6 +377,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataObj: {fileID: 11400000, guid: 5cc0419bb640a4748b0c3a4bddadac3b, type: 2}
+--- !u!95 &36945034
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36945029}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e1963dc2e6f6ed49acbab875dd5065a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &130166001
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,14 +541,14 @@ RectTransform:
   m_GameObject: {fileID: 614984685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.7333, y: 0.23246618, z: 1}
+  m_LocalScale: {x: 3.7333, y: 0.30734354, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2065584880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1, y: -45}
+  m_AnchoredPosition: {x: 1, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614984687
@@ -2278,6 +2300,42 @@ PrefabInstance:
     - target: {fileID: 2042156034581724951, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
       propertyPath: m_Name
       value: ScoreItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 36945034}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Pop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813734327394292451, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
+      propertyPath: triggerEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7968881599975580427, guid: 2517a0aa36221894d90e326cb7fe564e, type: 3}
       propertyPath: m_LocalPosition.x
