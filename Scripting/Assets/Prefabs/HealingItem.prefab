@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6744050209745518087}
   - component: {fileID: 4093058225399072473}
   - component: {fileID: 4937997850518639812}
+  - component: {fileID: 7969665913892805696}
+  - component: {fileID: 5794674852250424161}
   m_Layer: 0
   m_Name: HealingItem
   m_TagString: Untagged
@@ -147,6 +149,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4937997850518639812}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.1
+          m_StringArgument: Disappear
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &4937997850518639812
 Animator:
   serializedVersion: 5
@@ -168,3 +182,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7969665913892805696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054221982958247430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5ae128b3b52f94f873a9314da5e7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4937997850518639812}
+  stateName: Disappear
+--- !u!114 &5794674852250424161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054221982958247430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0d0898b572cd04fbf13214c275a8b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

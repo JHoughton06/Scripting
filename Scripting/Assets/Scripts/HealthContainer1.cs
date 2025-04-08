@@ -8,6 +8,8 @@ public class HealthContainer1 : MonoBehaviour
 
     public void ReduceHealth(float amount)
     {
-        healthData.UpdateValue(amount);
+        float newHealth = Mathf.Clamp(healthData.value + amount, 0f, 1f);
+        healthData.value = newHealth;
     }
+
 }
