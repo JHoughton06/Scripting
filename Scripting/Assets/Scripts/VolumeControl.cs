@@ -17,6 +17,6 @@ public class VolumeControl : MonoBehaviour
 
     public void AdjustVolume(float newVolume)
     {
-        volumeSlider.value = newVolume;
+        musicSource.volume = newVolume;
     }
 }
