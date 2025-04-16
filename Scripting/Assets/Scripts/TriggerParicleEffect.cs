@@ -4,18 +4,13 @@ using UnityEngine;
 
 [ RequireComponent(typeof(ParticleSystem), typeof(Collider))]
 
-public class TriggerParicleEffect : MonoBehaviour
+public class TriggerParticleEffect : MonoBehaviour
 {
-    private ParticleSystem particleSystem;
+    public ParticleSystem particleEffect;
     public int firstEmissionAmount = 10;
-    public int secondEmissionAmount = 20;
-    public int thirdEmissionAmount = 30;
+    public int secondEmissionAmount = 8;
+    public int thirdEmissionAmount = 3;
     public float delayBetweenEmissions = 0.5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        particleSystem = GetComponent<ParticleSystem>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,14 +22,13 @@ public class TriggerParicleEffect : MonoBehaviour
 
     private IEnumerator EmitParticlesCoroutine()
     {
-        particleSystem.Emit(firstEmissionAmount);
-        yield return new WaitForSeconds(delayBetweenEmissions);
-
-        particleSystem.Emit(secondEmissionAmount);
-        yield return new WaitForSeconds(delayBetweenEmissions);
-
-        particleSystem.Emit(thirdEmissionAmount);
+        if (particleEffect != null)
+        {
+            particleEffect.Emit(firstEmissionAmount);
+            yield return new WaitForSeconds(delayBetweenEmissions);
+            particleEffect.Emit(secondEmissionAmount);
+            yield return new WaitForSeconds(delayBetweenEmissions);
+            particleEffect.Emit(thirdEmissionAmount);
+        }
     }
-
-
 }
